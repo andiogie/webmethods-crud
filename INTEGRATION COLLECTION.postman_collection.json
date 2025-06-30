@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "ef99f8c3-ed60-49b6-9454-059d37938b48",
+		"name": "INTEGRATION COLLECTION",
+		"description": "Integration Connection by Andi Putra Ogie\n\nIntegration Packages for webMethods Development\n\nIntegraion Services like Select, Insert, Update, Delete, OAuth Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7006800"
+	},
+	"item": [
+		{
+			"name": "Get Mst Customer By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "manage",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "charset=UTF-8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5555/restv2/integration.webservices:mstcustomer/mstcustomer/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"restv2",
+						"integration.webservices:mstcustomer",
+						"mstcustomer",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Mst Customer",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "manage",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"insertMstCustomerRequest\": {\r\n        \"fullName\": \"Muhammad\",\r\n        \"email\": \"muhammad@gmail.com\",\r\n        \"phoneNumber\": \"0852123456789\",\r\n        \"address\": \"Jl. Cemara\",\r\n        \"city\": \"Bandung\",\r\n        \"postalCode\": \"52110\",\r\n        \"customerType\": \"retail\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5555/restv2/integration.webservices:mstcustomer/mstcustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"restv2",
+						"integration.webservices:mstcustomer",
+						"mstcustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Mst Customer By ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "manage",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"updateMstCustomerRequest\": {\r\n        \"fullName\": \"Muhammad Habibi 3\",\r\n        \"email\": \"muhammad@gmail.com\",\r\n        \"phoneNumber\": \"081122334455\",\r\n        \"address\": \"Jl. Cemara\",\r\n        \"city\": \"Bandung\",\r\n        \"postalCode\": \"52110\",\r\n        \"customerType\": \"retail\",\r\n        \"status\": \"Active\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5555/restv2/integration.webservices:mstcustomer/mstcustomer/26",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"restv2",
+						"integration.webservices:mstcustomer",
+						"mstcustomer",
+						"26"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
